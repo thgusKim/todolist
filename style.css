@@ -9,9 +9,13 @@ body {
     background-color: white;
     min-height: 100vh;
     box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    border-top: 10px solid blanchedalmond;
+    border-bottom: 10px solid blanchedalmond;
 }
-
-.task-area {
+.input-area{
+    position: relative;
+}
+.task-area{
     border: 1px solid lightgray;
 }
 
@@ -30,19 +34,94 @@ body {
     background-color: lightpink;
     height: 4px;
     position: absolute;
-    width: 60px;
-    left: 0px;
-    top: 52px;
-    padding: 0px;
+    width: 50px;
+    left: 0;
+    top: 56px;
+    padding: 0;
+    transition: 0.5s;
 }
 
 .task {
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    position: relative;
+    border-bottom: 1px solid lightgray;
+}
+
+.task span{
+    display: flex;
     padding: 1em;
 }
 
 .task-done{
     text-decoration: line-through;
+    background-color: lightgrey;
 }
 
+#add-button{
+    border: 1px solid blanchedalmond;
+    background-color: blanchedalmond;
+}
+
+#task-input{
+    border: 1px solid blanchedalmond;
+    width: 75%;
+}
+
+#task-input:focus{
+    outline: none;
+    border-bottom: 3px solid blanchedalmond;
+    transition: 0.5s;
+    padding-top: 35px;
+    border-left: none;
+    border-right: none;
+    border-top: none;
+}
+
+#task-input + label > span {
+    font-weight: 300;
+    margin: 0;
+    position: absolute;
+    color: #8f8f8f;
+    font-size: 14px;
+    top: 7px;
+    left: 10px;
+    -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+.task-size{
+    display: flex;
+}
+
+.task-size button{
+    border: none;
+    background-color: white;
+    width: 80px;
+    transition: 0.5s;
+}
+
+.cancel-button{
+    color: grey;
+}
+
+.delete-button{
+    color: red;
+}
+
+.delete-button:hover{
+    background-color: rgb(255, 0, 0, 0.3);
+}
+
+.check-button{
+    color: green;
+}
+
+.check-button:hover{
+    background-color: greenyellow;
+}
+
+.done-color{
+    background-color: lightgray;
+}
